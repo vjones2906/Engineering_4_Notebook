@@ -58,6 +58,6 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 ### Test Link
 [Google](http://www.google.com)      
 ### Test Image
-[ ](raspberry-pi/test.py)
+[Minons!](images/minons.png)
 ### Test GIF
-[Hyperlink 
+[More Minons!](images/minions.gif)
