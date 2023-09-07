@@ -18,14 +18,23 @@ The purpose of this assingment is to create a countdown from 10 to 0 using a for
 ![countdowngif](images/countdown.gif)
 ### Wiring
 
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
+No wiring for this assignment
 
 ### Code
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+
+``` python
+#type: ignore
+from time import sleep               #imports sleep
+
+for x in range (10,0,-1):            #count down from ten to zero by -1s
+    print (x)                        #print the value
+    sleep(1)
+print ('Liftoff!')                   #after countdown is done, print liftoff
+```
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+This assignment was fairly basic. There are many different ways to do it, but the way I settled on was the fastest way just using a for loop but setting the bounds and the interval after declaring it. I learned that there is always a faster, more compact way to write code and try to figure it out as opposed to the long way.
 
 &nbsp;
 
