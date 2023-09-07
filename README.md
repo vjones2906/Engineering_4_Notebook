@@ -3,21 +3,19 @@
 &nbsp;
 
 ## Table of Contents
-* [Raspberry_Pi_Assignment_Template](#raspberry_pi_assignment_template)
+* [Launch_1-Countdown](#launch_1-countdown)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
 
-## Raspberry_Pi_Assignment_Template
+## Launch_1-Countdown
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
-
+The purpose of this assingment is to create a countdown from 10 to 0 using a for loop. 
 ### Evidence 
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
-
+![countdowngif](images/countdown.gif)
 ### Wiring
 
 This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
