@@ -1,9 +1,7 @@
 #type: ignore
-import board  
-from time import sleep
-import digitalio
+from time import sleep               #imports sleep
 
-countdown = 10 
-for x in range (10):
-    print countdown
-    countdown  = countdown - 1
+for x in range (10,0,-1):            #count down from ten to zero by -1s
+    print (x)                        #print the value
+    sleep(1)
+print ('Liftoff!')                   #after countdown is done, print liftoff
