@@ -13,9 +13,11 @@
 ### Assignment Description
 
 The purpose of this assingment is to create a countdown from 10 to 0 using a for loop. 
+
 ### Evidence 
 
 ![countdowngif](images/countdown.gif)
+
 ### Wiring
 
 No wiring for this assignment
@@ -23,7 +25,6 @@ No wiring for this assignment
 ### Code
 
 ``` python
-#type: ignore
 from time import sleep               #imports sleep
 
 for x in range (10,0,-1):            #count down from ten to zero by -1s
@@ -35,6 +36,51 @@ print ('Liftoff!')                   #after countdown is done, print liftoff
 ### Reflection
 
 This assignment was fairly basic. There are many different ways to do it, but the way I settled on was the fastest way just using a for loop but setting the bounds and the interval after declaring it. I learned that there is always a faster, more compact way to write code and try to figure it out as opposed to the long way.
+
+&nbsp;
+
+## Launch_2-Lights
+
+### Assignment Description
+
+The purpose of this assingment is to create a countdown from 10 to 0 turning on the red light for every second counting down, then turning on the green light upon completion  
+
+### Evidence 
+
+![countdownlightsgif](images/countdowlights.gif)
+
+### Wiring
+
+No wiring for this assignment
+
+### Code
+
+``` python
+import digitalio
+import board
+from time import sleep                          #importing libs
+
+Rled = digitalio.DigitalInOut(board.GP0)
+Rled.direction = digitalio.Direction.OUTPUT     #declaring red led as an output in pin 0
+
+Gled = digitalio.DigitalInOut(board.GP1)
+Gled.direction = digitalio.Direction.OUTPUT     #declaring green led as an output in pin 1
+
+for x in range (10,0,-1):                       #count down from ten to zero by -1s
+    print (x)                                   #printing value
+    Rled.value = True                           #turing red led on
+    sleep(.5)                                   #light on for half a second
+    Rled.value = False                          #turing red led off
+    sleep(.5)                                   #completing the second
+print ('Liftoff!')                              #after countdown is done, print liftoff
+Gled.value = True                               #turing green led on
+sleep(3)
+
+```
+
+### Reflection
+
+For this assignment we just had to turn on lights along with the coundown. The trickiest part was figruing out how long to sleep and when to turn on the lights. I split it up .5 and .5 so it is still a full second but the red light only comes on for half a second. I also remembered that once the script ends everything turns off so the green light doesn't stay on forever. To counter this I just put a sleep at the end. 
 
 &nbsp;
 
