@@ -97,7 +97,7 @@ The purpose of this assingment is to initiate a countdown from 10 to 0 using a b
 
 ### Wiring
 
-No wiring for this assignment
+![buttonwiring](images/buttonwiring.png)
 
 ### Code
 
