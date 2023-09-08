@@ -53,7 +53,7 @@ The purpose of this assingment is to create a countdown from 10 to 0 turning on 
 
 ### Wiring
 
-No wiring for this assignment
+![lightswiring](images/lightswiring.png)
 
 ### Code
 
