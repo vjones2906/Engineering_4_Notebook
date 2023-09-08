@@ -140,7 +140,7 @@ This assingment was confusing at first becuase I forgot how button pullups and p
 
 ### Assignment Description
 
-The purpose of this assingment is to initiate a countdown from 10 to 0 using a button with a blinking red light for each second and then both a static green light and 180 servo once the countdown is finished. 
+The purpose of this assingment is to initiate a countdown from 10 to 0 using a button with a blinking red light for each second and then activate both a static green light and 180 servo once the countdown is finished. 
 
 ### Evidence 
 
