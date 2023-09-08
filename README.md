@@ -5,6 +5,7 @@
 ## Table of Contents
 * [Launch_1-Countdown](#launch_1-countdown)
 * [Launch_2-Lights](#launch_1-lights)
+* [Launch_3-Button](#launch_1-button)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -82,6 +83,58 @@ sleep(3)
 ### Reflection
 
 For this assignment we just had to turn on lights along with the coundown. The trickiest part was figruing out how long to sleep and when to turn on the lights. I split it up .5 and .5 so it is still a full second but the red light only comes on for half a second. I also remembered that once the script ends everything turns off so the green light doesn't stay on forever. To counter this I just put a sleep at the end. 
+
+&nbsp;
+
+## Launch_3-Button
+
+### Assignment Description
+
+The purpose of this assingment is to initiate a countdown from 10 to 0 using a button with a blinking red light for each second and a static green light once the countdown is finished. 
+
+### Evidence 
+
+![countdownbuttongif](images/countdownbutton.gif)
+
+### Wiring
+
+No wiring for this assignment
+
+### Code
+
+``` python
+#type: ignore
+import digitalio
+import board
+from time import sleep                          #importing libs
+
+Rled = digitalio.DigitalInOut(board.GP0)
+Rled.direction = digitalio.Direction.OUTPUT     #declaring red led as an output in pin 0
+
+Gled = digitalio.DigitalInOut(board.GP1)
+Gled.direction = digitalio.Direction.OUTPUT     #declaring green led as an output in pin 1
+
+button = digitalio.DigitalInOut(board.GP16)
+button.direction = digitalio.Direction.INPUT     #declaring button as an input in pin 16
+button.pull = digitalio.Pull.UP                  #making the button a pull down
+
+while True:
+    if button.value == False:                           #if the button is pressed, do:
+        for x in range (10,0,-1):                       #count down from ten to zero by -1s
+            print (x)                                   #printing value
+            Rled.value = True                           #turing red led on
+            sleep(.5)                                   #light on for half a second
+            Rled.value = False                          #turing red led off
+            sleep(.5)                                   #completing the second
+        print ('Liftoff!')                              #after countdown is done, print liftoff
+        Gled.value = True                               #turing green led on
+        sleep(3)
+        Gled.value = False
+```
+
+### Reflection
+
+This assingment was confusing at first becuase I forgot how button pullups and pulldowns worked. Once I fully read Mr. Miller's assignment I was able to understand why my button wasn't working. Becuase it was connected to ground and not power, it needed to be a pullup and the if loop condition should have been False with two equal signs. 
 
 &nbsp;
 
