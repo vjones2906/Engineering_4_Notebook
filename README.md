@@ -83,7 +83,6 @@ sleep(3)
 
 For this assignment we just had to turn on lights along with the coundown. The trickiest part was figruing out how long to sleep and when to turn on the lights. I split it up .5 and .5 so it is still a full second but the red light only comes on for half a second. I also remembered that once the script ends everything turns off so the green light doesn't stay on forever. To counter this I just put a sleep at the end. 
 
-&nbsp;
 
 ## Launch_3-Button
 
