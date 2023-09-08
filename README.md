@@ -6,6 +6,7 @@
 * [Launch_1-Countdown](#launch_1-countdown)
 * [Launch_2-Lights](#launch_2-lights)
 * [Launch_3-Button](#launch_3-button)
+* [Launch_4-Servo](#launch_4-servo)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -133,6 +134,31 @@ while True:
 ### Reflection
 
 This assingment was confusing at first becuase I forgot how button pullups and pulldowns worked. Once I fully read Mr. Miller's assignment I was able to understand why my button wasn't working. Becuase it was connected to ground and not power, it needed to be a pullup and the if loop condition should have been False with two equal signs. 
+
+
+## Launch_4-Servo
+
+### Assignment Description
+
+The purpose of this assingment is to initiate a countdown from 10 to 0 using a button with a blinking red light for each second and then both a static green light and 180 servo once the countdown is finished. 
+
+### Evidence 
+
+![countdownservogif](images/countdownservo.gif)
+
+### Wiring
+
+No wiring for this assignment
+
+### Code
+
+``` python
+
+```
+
+### Reflection
+
+
 
 &nbsp;
 
