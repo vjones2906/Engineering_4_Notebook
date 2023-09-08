@@ -4,7 +4,7 @@
 
 ## Table of Contents
 * [Launch_1-Countdown](#launch_1-countdown)
-* [Launch_2-Lights](#launch_1-lights)
+* [Launch_1-Lights](#launch_1-lights)
 * [Launch_3-Button](#launch_1-button)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
