@@ -4,8 +4,8 @@
 
 ## Table of Contents
 * [Launch_1-Countdown](#launch_1-countdown)
-* [Launch_1-Lights](#Launch_2-Lights)
-* [Launch_3-Button](#launch_1-button)
+* [Launch_1-Lights](#launch_2-lights)
+* [Launch_3-Button](#launch_3-button)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -39,7 +39,6 @@ print ('Liftoff!')                   #after countdown is done, print liftoff
 
 This assignment was fairly basic. There are many different ways to do it, but the way I settled on was the fastest way just using a for loop but setting the bounds and the interval after declaring it. I learned that there is always a faster, more compact way to write code and try to figure it out as opposed to the long way.
 
-&nbsp;
 
 ## Launch_2-Lights
 
