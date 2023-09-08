@@ -48,7 +48,7 @@ The purpose of this assingment is to create a countdown from 10 to 0 turning on 
 
 ### Evidence 
 
-![countdownlightsgif](images/countdowlights.gif)
+![countdownlightsgif](images/countdownlights.gif)
 
 ### Wiring
 
