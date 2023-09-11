@@ -4,8 +4,9 @@
 
 ## Table of Contents
 * [Launch_1-Countdown](#launch_1-countdown)
-* [Launch_2-Lights](#launch_1-lights)
-* [Launch_3-Button](#launch_1-button)
+* [Launch_2-Lights](#launch_2-lights)
+* [Launch_3-Button](#launch_3-button)
+* [Launch_4-Servo](#launch_4-servo)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -39,7 +40,6 @@ print ('Liftoff!')                   #after countdown is done, print liftoff
 
 This assignment was fairly basic. There are many different ways to do it, but the way I settled on was the fastest way just using a for loop but setting the bounds and the interval after declaring it. I learned that there is always a faster, more compact way to write code and try to figure it out as opposed to the long way.
 
-&nbsp;
 
 ## Launch_2-Lights
 
@@ -49,11 +49,11 @@ The purpose of this assingment is to create a countdown from 10 to 0 turning on 
 
 ### Evidence 
 
-![countdownlightsgif](images/countdowlights.gif)
+![countdownlightsgif](images/countdownlights.gif)
 
 ### Wiring
 
-No wiring for this assignment
+![lightswiring](images/lightswiring.png)
 
 ### Code
 
@@ -84,7 +84,6 @@ sleep(3)
 
 For this assignment we just had to turn on lights along with the coundown. The trickiest part was figruing out how long to sleep and when to turn on the lights. I split it up .5 and .5 so it is still a full second but the red light only comes on for half a second. I also remembered that once the script ends everything turns off so the green light doesn't stay on forever. To counter this I just put a sleep at the end. 
 
-&nbsp;
 
 ## Launch_3-Button
 
@@ -98,7 +97,7 @@ The purpose of this assingment is to initiate a countdown from 10 to 0 using a b
 
 ### Wiring
 
-No wiring for this assignment
+![buttonwiring](images/buttonwiring.png)
 
 ### Code
 
@@ -136,6 +135,31 @@ while True:
 
 This assingment was confusing at first becuase I forgot how button pullups and pulldowns worked. Once I fully read Mr. Miller's assignment I was able to understand why my button wasn't working. Becuase it was connected to ground and not power, it needed to be a pullup and the if loop condition should have been False with two equal signs. 
 
+
+## Launch_4-Servo
+
+### Assignment Description
+
+The purpose of this assingment is to initiate a countdown from 10 to 0 using a button with a blinking red light for each second and then activate both a static green light and 180 servo once the countdown is finished. 
+
+### Evidence 
+
+![countdownservogif](images/countdownservo.gif)
+
+### Wiring
+
+![servowiring](images/servowiring.png)
+
+### Code
+
+``` python
+
+```
+
+### Reflection
+
+
+
 &nbsp;
 
 ## Onshape_Assignment_Template
@@ -159,8 +183,6 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 &nbsp;
 
 ## Media Test
-
-Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
 
 ### Test Link
 [Google](https://en.wikipedia.org/wiki/Minions:_The_Rise_of_Gru?scrlybrkr=e146fde2)      
