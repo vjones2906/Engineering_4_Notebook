@@ -7,6 +7,7 @@
 * [Launch_2-Lights](#launch_2-lights)
 * [Launch_3-Button](#launch_3-button)
 * [Launch_4-Servo](#launch_4-servo)
+* [Crash_Avoidence-Accelerometer](#crash_avoidence-accelerometer)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -194,6 +195,66 @@ while True:
 
 This assignment was easy because all I had to do was follow instructions. The hardest part was understanding how the servo libaries should be referenced and what all the things inside the parenthesis mean. When defining a servo you need to define two things: the actual variable you are going to use in your loops and the output from the Pico pin that you will need to use to define the real variable. 
 
+
+## Crash_Avoidence-Accelerometer 
+
+### Assignment Description
+
+The purpose of this assingment was to hook up an accelerometer to the pico and print the values into the terminal. 
+
+### Evidence 
+
+![crashaccelgif](images/crashaccel.gif)
+
+### Wiring
+
+![accelwiring](images/accelwiring.png)
+
+### Code
+
+``` python
+#type: ignore
+import adafruit_mpu6050
+import  busio
+import board
+from time import sleep                #imports required libraries 
+
+sda_pin = board.GP14                  #defining sda pin
+scl_pin = board.GP15                  #defining the scl pin
+i2c = busio.I2C(scl_pin, sda_pin)     #creating the i2c from the pins
+mpu = adafruit_mpu6050.MPU6050(i2c)   #putting them all together to make the accelerometer 
+
+while True:
+    print("x:", mpu.acceleration[0])
+    print("y:", mpu.acceleration[1])
+    print("z:", mpu.acceleration[2])  #printing respective x, y, and z values
+    print("")                         #printing new line
+    sleep(1)                          #sleep for 1 second 
+```
+
+### Reflection
+
+This assnigment was not challenging. Once the new libraries were imported, all I had to do was use them in my code. I used the example code from the assingment to use the values provided by the accelerometer. I then infered that because the x value recorded by the accelerometer was mpu.acceleration[0], the y would be [1] and the z [2]. I didn't know if there was a better way to create a new line inbetween sets, but google didn't show anything easy so I just jused an empty print line. 
+
+&nbsp;
+
+## Onshape_Assignment_Template
+
+### Assignment Description
+
+Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+
+### Part Link 
+
+[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+
+### Part Image
+
+Take a nice screenshot of your Onshape document. 
+
+### Reflection
+
+What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
 &nbsp;
 
 ## Onshape_Assignment_Template
