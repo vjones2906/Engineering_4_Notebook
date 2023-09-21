@@ -8,7 +8,7 @@
 * [Launch_3-Button](#launch_3-button)
 * [Launch_4-Servo](#launch_4-servo)
 * [Crash_Avoidence-Accelerometer](#crash_avoidence-accelerometer)
-* [Crash_Avoidence-Lights&Power](#crashavoidence-lightspower)
+* [Crash_Avoidence-Lights&Power](#crash_avoidence-lights&power)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
