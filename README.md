@@ -9,6 +9,7 @@
 * [Launch_4-Servo](#launch_4-servo)
 * [Crash_Avoidence-Accelerometer](#crash_avoidence-accelerometer)
 * [Crash_Avoidence-Lights&Power](#crash_avoidence-lightspower)
+* [Crash_Avoidence-OLED](#crash_avoidence-oled)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -242,7 +243,7 @@ This assingment was not challenging. Once the new libraries were imported, all I
 
 ### Assignment Description
 
-The purpose of this assingment was to turn on an LED if the accelerometer was rotated outside a certain range
+The purpose of this assingment was to turn on an LED if the accelerometer was rotated outside a certain range.
 
 ### Evidence 
 
@@ -286,6 +287,74 @@ while True:
 ### Reflection
 
 This assingment was a bit more complicated than the last one. I hooked up the LED in the same way I did in the first assingment and copied that code over. Then I hooked up a second breadboard to create space and put the battery on that breadboard. You have to be careful when connecting the pins for the battery to the right pins in the pico and double check your work because I saw other people in my class fry their pico. I learned that you could use abs() to take the absolute value of an input so I could tidy up my loop requirements.
+
+
+## Crash_Avoidence-OLED 
+
+### Assignment Description
+
+The purpose of this assingment was to turn on an LED if the accelerometer was rotated outside a certain range and then print the x, y, and z angular velocities on an OLED screen. 
+
+### Evidence 
+
+![crasholedgif](images/crasholed.gif)
+
+### Wiring
+
+![oledwiring](images/oledwiring.png)
+
+### Code
+
+``` python
+#type: ignore
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+import terminalio
+import displayio
+import digitalio
+import adafruit_mpu6050
+import  busio
+import board
+from time import sleep                                                         #imports required libraries 
+
+displayio.release_displays()
+
+led = digitalio.DigitalInOut(board.GP0)                                        #telling the pico that there is something on pin 0
+led.direction = digitalio.Direction.OUTPUT                                     #declaring  led as an output in pin 0
+
+sda_pin = board.GP14                                                           #defining sda pin
+scl_pin = board.GP15                                                           #defining the scl pin
+i2c = busio.I2C(scl_pin, sda_pin)                                              #creating the i2c from the pins
+mpu = adafruit_mpu6050.MPU6050(i2c, address=0x68)                              #declaring the accerlerometer in this address
+
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP20) #declaring the OLED in this address 
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+splash = displayio.Group()
+title = "ANGULAR VELOCITY"
+text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+splash.append(text_area)    
+display.show(splash)                                                            #setting up the OLED
+
+newline = ord('\n')
+
+while True:
+    print("x:", mpu.gyro[0])
+    print("y:", mpu.gyro[1])
+    print("z:", mpu.gyro[2])        #printing respective x, y, and z values
+    print("")                       #printing new line
+    sleep(.2)                       #sleep for .2 seconds 
+    text_area.text = f"{title}: \n X:{round(mpu.gyro[0],3)} \n Y:{round(mpu.gyro[1],3)} \n Z:{round(mpu.gyro[2],3)}" #print the x, y, and z values on the OLED
+    if abs(mpu.acceleration[0]) > 8.5 or abs(mpu.acceleration[1]) > 8.5 or mpu.acceleration[2] < 0:                  #if accelerometer rotates out of range do:
+        print("uh oh")                
+        led.value = True             #turns led on
+        text_area.text = f"Rotation: \n X:{round(mpu.gyro[0],3)} \n Y:{round(mpu.gyro[1],3)} \n Z:{round(mpu.gyro[2],3)}"
+    else:                            #if accelerometer is in range do:
+        led.value = False            #turns led off
+```
+
+### Reflection
+
+
 
 &nbsp;
 
