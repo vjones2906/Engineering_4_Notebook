@@ -354,7 +354,7 @@ while True:
 
 ### Reflection
 
-
+This assingment was very tricky. It introduced an OLED which has a lot of setup and specific syntax. We also had to use code to find the address of the two i2cs and then use the same SDA/SCL pins for them. I had to learn how to do f strings and the syntax for those. these: {} are used for print variables defined before in the code or inputs
 
 &nbsp;
 
