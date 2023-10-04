@@ -10,7 +10,7 @@
 * [Crash_Avoidence-Accelerometer](#crash_avoidence-accelerometer)
 * [Crash_Avoidence-Lights&Power](#crash_avoidence-lightspower)
 * [Crash_Avoidence-OLED](#crash_avoidence-oled)
-* [Onshape_Assignment_Template](#onshape_assignment_template)
+* [FEA_Part1](#fea_part1)
 
 &nbsp;
 
@@ -358,23 +358,22 @@ This assingment was very tricky. It introduced an OLED which has a lot of setup 
 
 &nbsp;
 
-## Onshape_Assignment_Template
+## FEA_Part1
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+We had to create a beam that was less than or equal to 13 grams and try to make it able to hold as much weight as possible.
+### Part Link
 
-### Part Link 
-
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+[Link to Onshapet](https://cvilleschools.onshape.com/documents/24b88ffe9264a0c98a74dc0e/w/222f8de2303c65f5e9c59127/e/16bf75dd5e63ea4c1d80e02d).
 
 ### Part Image
 
-Take a nice screenshot of your Onshape document. 
+![fea_part1](images/fea1.png)
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+This project made me and Vinnie learn to work as a team together. we both have good ideas and it is hard to choose the best one sometimes it leads to arguments but in the end, we prevailed and came up with a great design that will hopefully hold up lots of weight (more than just the bucket). Our design includes triangles and kites which all allowed us to not implement overhangs into our design. I also relearned lots of things in CAD such as what the chamfer tool does and just some basics that I hadn't used in 4 months. We used variables and design intent to make editing the beam easier.
 
 &nbsp;
 
