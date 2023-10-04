@@ -366,7 +366,7 @@ We had to create a beam that was less than or equal to 13 grams and able to hold
 
 ### Onshape Link
 
-[Onshape](https://cvilleschools.onshape.com/documents/24b88ffe9264a0c98a74dc0e/w/222f8de2303c65f5e9c59127/e/16bf75dd5e63ea4c1d80e02d).
+[Onshape](https://cvilleschools.onshape.com/documents/24b88ffe9264a0c98a74dc0e/w/222f8de2303c65f5e9c59127/e/16bf75dd5e63ea4c1d80e02d)
 
 ### Part Image
 
