@@ -11,6 +11,9 @@
 * [Crash_Avoidence-Lights&Power](#crash_avoidence-lightspower)
 * [Crash_Avoidence-OLED](#crash_avoidence-oled)
 * [FEA_Part1](#fea_part1)
+* [FEA_Part2](#fea_part3)
+* [FEA_Part4](#fea_part4)
+
 
 &nbsp;
 
@@ -375,6 +378,48 @@ We had to create a beam that was less than or equal to 13 grams and able to hold
 ### Reflection
 
 This project made me and Vinnie learn to work as a team together. we both have good ideas and it is hard to choose the best one sometimes it leads to arguments but in the end, we prevailed and came up with a great design that will hopefully hold up lots of weight (more than just the bucket). Our design includes triangles and kites which all allowed us to not implement overhangs into our design. I also relearned lots of things in CAD such as what the chamfer tool does and just some basics that I hadn't used in 4 months. We used variables and design intent to make editing the beam easier.
+
+
+## FEA_Part3
+
+### Assignment Description
+
+Use FEA to figure out the displacement and weak points of the beam. 
+
+### Onshape Link
+
+[Onshape](https://cvilleschools.onshape.com/documents/24b88ffe9264a0c98a74dc0e/w/222f8de2303c65f5e9c59127/e/16bf75dd5e63ea4c1d80e02d)
+
+### Part Image
+Displacement
+![displacement1](images/feadisplacement1.png)
+Stress
+![stress1](images/feastress1.png)
+
+### Reflection
+
+The challenges we had were derived mainly from the relatively short beam which led to less support throughout. That, combined with a design that used a chamfer which gradually slimmed down our beam from 19 mm to 9 mm led to more structural issues. The point most likely to fail was the end because it kept getting skinnier and there wasn't anything helping it to stay up. The changes we decided to make include completely redesigning the beam in order to have any chance of competing at all.
+
+
+## FEA_Part4
+
+### Assignment Description
+
+Our job was to redesign the beam beased on the FEA analysis and make it much stronger than ever imagined before. 
+
+### Onshape Link
+
+[Onshape](https://cvilleschools.onshape.com/documents/24b88ffe9264a0c98a74dc0e/w/222f8de2303c65f5e9c59127/e/16bf75dd5e63ea4c1d80e02d)
+
+### Part Image
+Displacement
+![displacement2](images/feadisplacement2.png)
+Stress
+![stress2](images/feastress2.png)
+
+### Reflection
+
+The main problem with our design was that there was no real strength in the triangles and kites. They looked like they might be strong but the way they were designed, they didn't add much value at all. In order to make it better we adjusted them so that they were more helpful in supporting the beam, and we made the beam twice as big as it was before. Then to take off weight we extruded small triangles and circles in between the kites. The von Mises Stress ended up increasing by 37% and got worse, while the displacement decreased by 32% which is better.
 
 &nbsp;
 
