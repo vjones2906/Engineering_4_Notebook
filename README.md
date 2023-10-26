@@ -12,8 +12,8 @@
 * [Crash_Avoidence-OLED](#crash_avoidence-oled)
 * [FEA_Part1](#fea_part1)
 * [FEA_Part2](#fea_part3)
-* [FEA_Part4](#fea_part4)
-
+* [FEA_Part4](#fea_part4) 
+* [Landing_Pad1](#landing_pad1) 
 
 &nbsp;
 
@@ -358,6 +358,69 @@ while True:
 ### Reflection
 
 This assingment was very tricky. It introduced an OLED which has a lot of setup and specific syntax. We also had to use code to find the address of the two i2cs and then use the same SDA/SCL pins for them. I had to learn how to do f strings and the syntax for those. these: {} are used for print variables defined before in the code or inputs
+
+
+## Landing_Pad1
+
+### Assignment Description
+
+In this assingment our goal was to make a function that would take 3 (x,y) coordinates as inputs and then calculate the area of the triangle created by those coordinates. 
+
+### Evidence 
+
+![landingpad1](images/landingpad1.gif)
+
+### Wiring
+
+No Wiring 
+
+### Code
+
+``` python
+#credit to afton for the math and functions portion
+#type: ignore
+
+from time import sleep
+
+x = 0
+y = 1
+
+def area(r1,r2,r3):
+    c1 = [0,0]
+    c2 = [0,0]
+    c3 = [0,0]
+    try:                    # Coordinate 1
+        c1 = [int(o) for o in r1.split(",")] # Splits raw string: "1,2" into a string array: "1", "2", and turns each value into an int: 1,2
+    except:
+        print("Coordinate 1 Invalid, please enter in 'x,y' format")
+        pass
+    finally:
+
+        try:                # Coordinate 2
+            c2 = [int(o) for o in r2.split(",")]
+        except:
+            print("Coordinate 2 Invalid, please enter in 'x,y' format")
+            pass
+        finally:
+
+            try:            # Coordinate 3
+                c3 = [int(o) for o in r3.split(",")]
+            except:
+                print("Coordinate 3 Invalid, please enter in 'x,y' format")
+                pass
+            finally:
+                A = (1/2)*abs(c1[x]*(c2[y] - c3[y]) + c2[x]*(c3[y] - c1[y]) + c3[x]*(c1[y] - c2[y])) # Easy plug and play equation for a triangle's area
+                return A
+while True:
+    r1 = input("Coordinate 1: ")                                                                                                                #asking for inputs
+    r2 = input("Coordinate 2: ")
+    r3 = input("Coordinate 3: ")
+    print('The area of the triangle with vertices ('+ str(r1)+ '), ('+ str(r2)+ '), ('+ str(r3)+ ') is '+ str(area(r1,r2,r3)) +' square km')    #returning answer
+```
+
+### Reflection
+
+I got to a slow start on this assingment and let quite a few class periods get away from me. Then Afton helped me out by showing me his code for the new syntax for the function we were trying to create. In order to take the input in the (x,y) form, we needed to use rx.split(","). This took research to figure out how to use and many trials and errors. Then in order to print the sentence that Mr. Miller wanted, I needed to remember how to integrate floats into strings and I did that by using the str() and + before and after every integration. 
 
 &nbsp;
 
