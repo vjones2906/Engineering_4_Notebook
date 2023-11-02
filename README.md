@@ -432,7 +432,8 @@ In this assingment our goal was to make a function that would take 3 (x,y) coord
 
 ### Evidence 
 
-![landingpad2](images/landingpad2.gif)
+![landingpad2](images/landingpad1.gif)
+![landingpad2](images/landingpad2.png)
 
 ### Wiring
 
@@ -516,7 +517,7 @@ while True:
 
 ### Reflection
 
-
+This assignment was tricky because I forgot how the OLED worked. I looked at my other code and wiring to decypher it, but ultimatly nick was a big help understanding how the "splash" worked. After downloading the required libraries, the shapes weren't too complicated, but I did have a problem with the triangle being rotated incorrectly. To fix this I had to make the y inputs negative, then it was oriented correctly. 
 
 
 &nbsp;
