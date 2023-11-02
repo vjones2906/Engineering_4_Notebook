@@ -433,7 +433,7 @@ In this assingment our goal was to make a function that would take 3 (x,y) coord
 ### Evidence 
 
 ![landingpad2](images/landingpad1.gif)
-![landingpad2](images/landingpad2.png)
+![landingpad2](images/landingpad2.jpg)
 
 ### Wiring
 
