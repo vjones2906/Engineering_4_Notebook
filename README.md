@@ -15,7 +15,8 @@
 * [FEA_Part4](#fea_part4) 
 * [Landing_Pad1](#landing_pad1)
 * [Landing_Pad2](#landing_pad2) 
-
+* [Morse_Code1]](#morse_code1) 
+* [Morse_Code2]](#morse_code2)
 &nbsp;
 
 ## Launch_1-Countdown
@@ -518,6 +519,61 @@ while True:
 ### Reflection
 
 This assignment was tricky because I forgot how the OLED worked. I looked at my other code and wiring to decypher it, but ultimatly nick was a big help understanding how the "splash" worked. After downloading the required libraries, the shapes weren't too complicated, but I did have a problem with the triangle being rotated incorrectly. To fix this I had to make the y inputs negative, then it was oriented correctly. 
+
+
+## Morse_Code1
+
+### Assignment Description
+
+In this assingment our goal was to make a function that would take user input and then translate it into morse code dots and dashes. If -q is typed, the script will stop.
+
+### Evidence 
+
+![Morse_Code1](images/morsecode1.gif)
+
+### Wiring
+
+No Wiring 
+
+### Code
+
+``` python
+#type: ignore
+print("Enter morse code message or -q to quit")
+message = ""
+character = 0
+MORSE_CODE = { 'A':'.-', 'B':'-...',
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ', ':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-', ' ':'/'}
+
+while True:
+    usrInput = input("Your message: ").upper() # Takes input from user and capitalizes it
+    if "-Q" in usrInput: # Checks if user would like to exit
+        exit()
+    try:
+        for character in range(len(usrInput)): # Iterates through each character of the input text
+            message += MORSE_CODE[usrInput[character]] + " " # Translates and adds a space
+    except:
+        message = ("Can't translate: " + str({usrInput[character]})) # Tells you if a character you typed was invalid
+    print(message)
+    message = ("")
+```
+
+### Reflection
+
+I got some help from afton understanding the if/try/except loops and then it wasn't too hard from there. The most tricky part was figuring out where to imbed the inputs and variables. I also had another string conflict and had to resolve that by using str() once again. 
 
 
 &nbsp;
