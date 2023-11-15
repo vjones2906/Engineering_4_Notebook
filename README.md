@@ -679,7 +679,7 @@ Collect data from acceleometer and then write it to data.csv. Has to be able to 
 
 ### Data
 
-|Time s|x acceleration|y acceleration|z acceleration|Tilt |
+|Time (s)|x acceleration (m/s2)|y acceleration (m/s2)|z acceleration (m/s2)|Tilt |
 |------|---------|---------|---------|---|
 |7.649 |0.550666 |8.71489  |8.81784  |0  |
 |8.782 |0.565032 |8.84658  |8.87052  |0  |
