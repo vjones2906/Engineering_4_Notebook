@@ -17,6 +17,7 @@
 * [Landing_Pad2](#landing_pad2) 
 * [Morse_Code1](#morse_code1) 
 * [Morse_Code2](#morse_code2)
+* [Data_Collection](#data_collection)
 
 &nbsp;
 
@@ -661,6 +662,69 @@ while True:
 
 This assingment was straightforward. After adding all the variables from the assingment, it was a matter of finding which loop to put the pauses within. I used the variables to set the amount of time the pauses lasted instead of typing the values in.
 
+
+## Data_Collection
+
+### Assignment Description
+
+Collect data from acceleometer and then write it to data.csv. Has to be able to collect data headless and turn on a warning light if it is tilted over 90 degrees. 
+
+### Evidence 
+
+![datacollection](images/datacollection.gif)
+
+### Wiring
+
+![datawiring](images/datawiring.png)
+
+### Data
+
+![data](images/data.csv)
+
+### Code
+
+``` python
+#type: ignore
+import digitalio
+import adafruit_mpu6050
+import  busio
+import board
+from digitalio import DigitalInOut,Direction,Pull
+from time import sleep, monotonic                      #imports required libraries 
+
+led = digitalio.DigitalInOut(board.GP1)                #telling the pico that there is something on pin 0
+led.direction = digitalio.Direction.OUTPUT             #declaring  led as an output in pin 0
+
+ledBoard = digitalio.DigitalInOut(board.LED)        
+ledBoard.direction = digitalio.Direction.OUTPUT        #declaring onboard led
+
+sda_pin = board.GP14                                   #defining sda pin
+scl_pin = board.GP15                                   #defining the scl pin
+i2c = busio.I2C(scl_pin, sda_pin)                      #creating the i2c from the pins
+mpu = adafruit_mpu6050.MPU6050(i2c)                    #putting them all together to make the accelerometer 
+
+tilt = 0                                               #defining tilt
+
+with open("/data.csv", "a") as datalog:                #write to this file
+    while True: 
+        ledBoard.value = True
+        sleep(0.1)
+        ledBoard.value = False                         #blink onboard if working
+        datalog.write(f"{monotonic()},{mpu.acceleration[0]},{mpu.acceleration[2]},{mpu.acceleration[2]},{tilt}\n")  #writing acceleration data
+        datalog.flush()
+        sleep(.9)
+        if mpu.acceleration[0] >= 9 or mpu.acceleration[1] >= 9:                                                    #if tilted turn on led
+            led.value = True #led on
+            tilt = 1
+        elif mpu.acceleration[0] <= -9 or mpu.acceleration[1] <= -9:                                                #if tilted other way turn on led
+            led.value = True
+            tilt = 0
+        else: led.value = False                                                                                     #else led false
+```
+
+### Reflection
+
+This assingment was tricky because of the read/write switch. It took me a while to figure out how to successfully switch the pico from read to write. In order to do so you would have to turn off the pico, switch the switch, and then plug it back in. Nick and Afton helped me figure out parts of the code and showed me where to find the files within the pico. 
 
 &nbsp;
 
