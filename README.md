@@ -785,6 +785,7 @@ Display the evidence collected in the form of graphs.
 
 ### Reflection
 
+This assingment was easy, I had worked with google sheet graphs before so it was just cleaning off the rust real quick. It is interesting that the y and z acceleration are very similar. 
 
 
 &nbsp;
