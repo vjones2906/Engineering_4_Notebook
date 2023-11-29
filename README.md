@@ -18,6 +18,8 @@
 * [Morse_Code1](#morse_code1) 
 * [Morse_Code2](#morse_code2)
 * [Data_Collection](#data_collection)
+* [Data_Collection_Graphs](#data_collection_graphs)
+
 
 &nbsp;
 
@@ -767,6 +769,23 @@ with open("/data.csv", "a") as datalog:                #write to this file
 ### Reflection
 
 This assingment was tricky because of the read/write switch. It took me a while to figure out how to successfully switch the pico from read to write. In order to do so you would have to turn off the pico, switch the switch, and then plug it back in. Nick and Afton helped me figure out parts of the code and showed me where to find the files within the pico. 
+
+
+## Data_Collection_Graphs
+
+### Assignment Description
+
+Display the evidence collected in the form of graphs.
+
+### Evidence 
+
+![accelerationgraph](images/accelgraph.png)
+
+![tiltgraph](images/tiltgraph.png)
+
+### Reflection
+
+
 
 &nbsp;
 
