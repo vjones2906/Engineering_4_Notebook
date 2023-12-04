@@ -383,7 +383,7 @@ No Wiring
 ### Code
 
 ``` python
-#credit to afton for the math and functions portion
+#I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 #type: ignore
 
 from time import sleep
@@ -426,7 +426,7 @@ while True:
 
 ### Reflection
 
-I got to a slow start on this assingment and let quite a few class periods get away from me. Then Afton helped me out by showing me his code for the new syntax for the function we were trying to create. In order to take the input in the (x,y) form, we needed to use rx.split(","). This took research to figure out how to use and many trials and errors. Then in order to print the sentence that Mr. Miller wanted, I needed to remember how to integrate floats into strings and I did that by using the str() and + before and after every integration. 
+I got to a slow start on this assingment and let quite a few class periods get away from me. Then Afton helped me out by showing me his code for the new syntax for the function we were trying to create. In order to take the input in the (x,y) form, we needed to use rx.split(","). This took research to figure out how to use and many trials and errors. Then in order to print the sentence that Mr. Miller wanted, I needed to remember how to integrate floats into strings and I did that by using the str() and + before and after every integration. I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 
 
 ## Landing_Pad2
@@ -446,7 +446,7 @@ In this assingment our goal was to make a function that would take 3 (x,y) coord
 ### Code
 
 ``` python
-#credit to afton for the math and functions portion
+#I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 #type: ignore
 
 from time import sleep
@@ -522,7 +522,7 @@ while True:
 
 ### Reflection
 
-This assignment was tricky because I forgot how the OLED worked. I looked at my other code and wiring to decypher it, but ultimatly nick was a big help understanding how the "splash" worked. After downloading the required libraries, the shapes weren't too complicated, but I did have a problem with the triangle being rotated incorrectly. To fix this I had to make the y inputs negative, then it was oriented correctly. 
+This assignment was tricky because I forgot how the OLED worked. I looked at my other code and wiring to decypher it, but ultimatly nick was a big help understanding how the "splash" worked. After downloading the required libraries, the shapes weren't too complicated, but I did have a problem with the triangle being rotated incorrectly. To fix this I had to make the y inputs negative, then it was oriented correctly. I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 
 
 ## Morse_Code1
