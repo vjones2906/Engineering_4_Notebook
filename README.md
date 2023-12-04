@@ -542,6 +542,7 @@ No Wiring
 ### Code
 
 ``` python
+#I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 #type: ignore
 print("Enter morse code message or -q to quit")                         #prompts user
 message = ""    
@@ -577,7 +578,8 @@ while True:
 
 ### Reflection
 
-I got some help from afton understanding the if/try/except loops and then it wasn't too hard from there. The most tricky part was figuring out where to imbed the inputs and variables. I also had another string conflict and had to resolve that by using str() once again. 
+I got some help from afton understanding the if/try/except loops and then it wasn't too hard from there. The most tricky part was figuring out where to imbed the inputs and variables. I also had another string conflict and had to resolve that by using str() once again. I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
+
 
 
 ## Morse_Code2
@@ -597,6 +599,7 @@ In this assingment our goal was to make a function that would take user input an
 ### Code
 
 ``` python
+#I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 #type: ignore
 import digitalio
 import board
@@ -662,7 +665,7 @@ while True:
 
 ### Reflection
 
-This assingment was straightforward. After adding all the variables from the assingment, it was a matter of finding which loop to put the pauses within. I used the variables to set the amount of time the pauses lasted instead of typing the values in.
+This assingment was straightforward. After adding all the variables from the assingment, it was a matter of finding which loop to put the pauses within. I used the variables to set the amount of time the pauses lasted instead of typing the values in. I used large portions of Afton's work in this assignment. Here is a link to their notebook: https://github.com/Avanhoo/Engineering_4_Notebook
 
 
 ## Data_Collection
